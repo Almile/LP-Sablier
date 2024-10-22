@@ -1,0 +1,272 @@
+:root{
+    --marrom-escuro: #3e2723;
+    --Bege: #f5f5dc;
+    --verde-oliva:#c5e1a5;
+    --Marrom-claro:#d7ccc8;
+    --marrom:#a1887f;
+}
+
+ul, ol{
+    text-decoration: none;
+    list-style: none;
+}
+
+body {
+    font-family: 'Merriweather', serif;
+    box-sizing: border-box;
+    padding: 0;
+    margin: 0;
+}
+
+header {
+    font-family: "Tangerine", cursive;
+    background-color: var(--marrom); /* Marrom escuro */
+    color: white;
+    font-size: 20px;
+    text-align: center;
+    padding: 5px;
+}
+
+h3{
+    margin: 1rem 0;
+    color: var(--marrom-escuro);
+    text-align: center;
+}
+
+h2{
+    color: var(--marrom);
+}
+
+p{
+    text-align: justify;
+}
+
+nav ul {
+    font-family: 'Pacifico', cursive;
+    list-style-type: none;
+    padding: 0;
+}
+
+nav ul li {
+    display: inline;
+    margin: 0 .5rem;
+}
+
+nav a {
+    color: white;
+    text-decoration: none;
+    transition: background-color 0.3s;
+}
+
+nav a:hover {
+    background-color: #a1887f; /* Marrom mais claro */
+    color: white;
+}
+
+aside ul li {
+    margin-top: .5rem;
+    border: 2px dotted var(--marrom-escuro); /* Marrom escuro */
+    border-radius: 5px;
+    padding: 10px;
+}
+
+.menu summary {
+    cursor: pointer;
+    padding: 5px;
+}
+
+.menu-content {
+    padding: 10px 0;
+}
+
+.menu h4 {
+    color:rgb(255, 175, 138);
+    margin: 10px 0 5px;
+    font-family: 'Pacifico', cursive;
+    border-bottom: 2px dotted rgb(255, 175, 138);
+}
+
+.menu ul {
+    list-style-type: none;
+    padding: 0;
+}
+
+.menu li {
+    padding: 5px 0;
+    border: none;
+}
+
+.container {
+    display: flex;
+}
+
+section{
+    width: 70%;
+    min-height: 70vh; 
+    padding: 1rem 3rem;
+    background-color: white;
+}
+
+.group{
+    display: flex;
+    margin:2rem 0 ;
+    gap: 1.5rem;
+}
+
+section img{
+    width: 200px;
+    height: 200px;
+    border-radius: 10px;
+}
+
+aside{
+    width: 30%;
+    min-height: 70vh; 
+    padding: 20px;
+    color: var(--marrom-escuro);
+    background-color: whitesmoke; 
+}
+
+footer{
+    text-align: center;
+    min-height: 5vh;
+    background-color: var(--Marrom-claro);
+    padding: 20px;
+}
+
+a {
+    color:var(--marrom-escuro); /* Cor inicial */
+    text-decoration: none; /* Remove o sublinhado */
+}
+
+a:hover ,summary:hover{
+    color: var(--verde-oliva); /* Cor ao passar o mouse */
+    text-decoration: underline; /* Adiciona sublinhado ao passar o mouse */
+}
+
+.team {
+    text-align: center;
+}
+
+.card-container {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+}
+
+.card {
+    background-color: #fff;
+    border: 1px solid #d7ccc8;
+    border-radius: 10px;
+    width: 28%;
+    padding: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s;
+    margin-bottom: 20px;
+}
+
+.card img {
+    width: 100%;
+    border-radius: 10px;
+}
+
+.card h3 {
+    margin: 15px 0 10px;
+    font-family: 'Pacifico', cursive;
+    color: #3e2723;
+}
+
+.card p {
+    text-align: justify;
+    font-family: 'Merriweather', serif;
+    color: #3e2723;
+}
+
+.card:hover {
+    transform: scale(1.05);
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+}
+
+aside {
+    position: relative;
+    padding-bottom: 60px; /* Espaço reservado para o botão fixo */
+}
+
+.fixed-button {
+    width: 90%;
+    margin:10px 5% 0;
+}
+
+.order-btn {
+    color:rgb(255, 175, 138);
+    border: none;
+    border-top: 1px dotted ;
+    padding: 15px 20px;
+    font-size: 16px;
+    font-weight: 600;
+    cursor: pointer;
+    width: 100%;
+    background-color: transparent;
+    transition: background-color 0.3s, transform 0.3s;
+}
+
+.order-btn:hover {
+    border: 1px dotted ;
+    transform: scale(1.05);
+}
+
+
+
+@media (max-width: 768px) {
+    .container {
+        flex-direction: column;
+    }
+
+    section, aside{
+        width: 90vw; 
+        padding: 5vw;
+        min-height: auto;
+    }
+
+    .group {
+        flex-direction: column; 
+        text-align: center;
+    }
+
+    .group img {
+        width: 100%;
+        height: auto;
+    }
+    .card-container {
+        flex-direction: column;
+    }
+
+    .card {
+        width: 94%;
+        margin-bottom: 10px;
+    }
+    
+    .card img {
+        height: 60vw;
+    }
+
+    .card h3 {
+        font-size: 20px; 
+    }
+
+    .card p {
+        font-size: 14px;
+    }
+
+    nav ul li {
+        margin-bottom: 15px;
+    }
+
+    nav a {
+        font-size: 18px; 
+    }
+
+    footer p {
+        font-size: 14px;
+    }
+}
